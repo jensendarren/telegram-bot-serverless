@@ -1,0 +1,19 @@
+service: tweetegybot
+
+provider:
+  name: aws
+  runtime: python3.6
+  stage: dev
+  region: ap-southeast-1
+  profile: paxpay
+  environment:
+    TELEGRAM_TOKEN: ${env:TELEGRAM_TOKEN}
+
+functions:
+  post:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: post
+          cors: true
