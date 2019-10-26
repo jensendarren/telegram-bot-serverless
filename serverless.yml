@@ -2,7 +2,7 @@ service: tweetegybot
 
 provider:
   name: aws
-  runtime: python3.6
+  runtime: ruby2.5
   stage: dev
   region: ap-southeast-1
   profile: paxpay
